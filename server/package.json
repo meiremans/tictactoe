@@ -1,0 +1,15 @@
+{
+  "name": "tictactoe-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  },
+  "scripts": {
+    "lint": "node_modules/.bin/eslint server/**/*.js"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
+}
