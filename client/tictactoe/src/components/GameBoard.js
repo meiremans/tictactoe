@@ -1,26 +1,54 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './GameBoard.css';
 
-class App extends Component {
+class GameBoard extends Component {
+
     render() {
+        const {doMove, board} = this.props;
         return (
             <div className="GameBoard">
-                <p className="GameBoard">
                 <ul>
-                    <li className='board left' id='1-1'>1-1</li>
-                    <li className='board' id='1-2'>1-2</li>
-                    <li className='board right' id='1-3'>1-3</li>
-                    <li className='board left middle' id='2-1'>2-1</li>
-                    <li className='board middle' id='2-2'>2-2</li>
-                    <li className='board right middle' id='2-3'>2-3</li>
-                    <li className='board left' id='3-1'>3-1</li>
-                    <li className='board' id='3-2'>3-2</li>
-                    <li className='board right' id='3-3'>3-3</li>
+                    <GenerateBoard field={board.field} action ={(index,player) => doMove(index,player)} />
                 </ul>
-                </p>
             </div>
+
         );
     }
 }
 
-export default App;
+function GenerateBoard(props) {
+    const listItems = props.field.map((place,index) => (
+     <li key ={place.placeId} onClick={() => props.action(index,1)} className={boardClassBuilder(place.placeId)}
+         id={place.placeId}>{playerIcons(place.player)}</li>
+));
+    return listItems;
+}
+
+function playerIcons(player){
+    switch(player) {
+        case 1:
+            return "X";
+        case 2:
+            return "O";
+        default:
+            return " ";
+    }
+
+}
+
+function boardClassBuilder(placeId) {
+    let classname = 'board ';
+    if(placeId.substring(2,3) === "1"){
+        classname = `${classname} left`
+    }
+    if(placeId.substring(2,3) === "3"){
+        classname = `${classname} right`
+    }
+    if(placeId.substring(0,1) === "2"){
+        classname = `${classname} middle`
+    }
+    return classname
+}
+
+
+export default GameBoard;

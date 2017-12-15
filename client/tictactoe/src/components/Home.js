@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './Home.css';
-import GameBoard from './GameBoard';
+import GameBoard from './../containers/GameboardPage';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
