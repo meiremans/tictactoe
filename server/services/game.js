@@ -2,7 +2,7 @@ async function newGame(){
     return {message: "game started"};
 }
 
-async function doMove(playerId,placeId){
+async function doMove(gameId,playerId,placeId){
     return {message: "move done"};
 }
 
