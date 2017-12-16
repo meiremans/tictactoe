@@ -90,6 +90,8 @@ Field.prototype.threeInAColumn = function () {
     let playerCount = 0;
     let aiCount = 0;
     for (let columns = 0; columns <= 3; columns++) {
+         playerCount = 0;
+         aiCount = 0;
         for (let i = columns; i < this.field.length; i = i + 3) {
             let winner = this.hasWinner(this.field[i], playerCount, aiCount);
             playerCount = winner.playerCount;
@@ -105,16 +107,29 @@ Field.prototype.threeInAColumn = function () {
 Field.prototype.threeDiagonally = function() {
     let playerCount = 0;
     let aiCount = 0;
-    for (let diagonals = 0; diagonals <= 2; diagonals = diagonals + 2) {
-        for (let i = diagonals; i < this.field.length; i = i + 3) {
-            let winner = this.hasWinner(this.field[i], playerCount, aiCount);
-            playerCount = winner.playerCount;
-            aiCount = winner.aiCount;
-            if (winner) {
-                return winner;
-            }
+
+    for(let i = 2; i < 8; i+=2){
+        console.log(this.field[i]);
+        let winner = this.hasWinner(this.field[i], playerCount, aiCount);
+        playerCount = winner.playerCount;
+        aiCount = winner.aiCount;
+        if (winner.winner) {
+            return winner;
         }
     }
+    console.log('-----');
+     playerCount = 0;
+     aiCount = 0;
+
+    for(let i = 0; i < 9; i+=4){
+        let winner = this.hasWinner(this.field[i], playerCount, aiCount);
+        playerCount = winner.playerCount;
+        aiCount = winner.aiCount;
+        if (winner.winner) {
+            return winner;
+        }
+    }
+
     return false;
 };
 

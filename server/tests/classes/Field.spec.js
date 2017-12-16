@@ -136,6 +136,69 @@ describe("Class Field", function() {
                 return expect(winner).to.deep.equal({ winner: true, player: '1' });
             });
         });
+
+        describe("threediagonally", function() {
+            it("should tell if someone has three diagonally", function() {
+                const turns = [{
+                    fieldId: "1-1",
+                    player : "0"
+                }, {
+                    fieldId: "1-2",
+                    player : "0"
+                }, {
+                    fieldId: "1-3",
+                    player : "1"
+                }, {
+                    fieldId: "2-1",
+                    player : "1"
+                }, {
+                    fieldId: "2-2",
+                    player : "1"
+                }, {
+                    fieldId: "2-3",
+                    player : "0"
+                }, {
+                    fieldId: "3-1",
+                    player : "1"
+                }, {
+                    fieldId: "3-3",
+                    player : "1"
+                }];
+                let field = new Field(turns);
+                let winner = field.threeDiagonally(field);
+                return expect(winner).to.deep.equal({ winner: true, player: '1' });
+            });
+            it("should tell if someone has three diagonally other side", function() {
+                const turns = [{
+                    fieldId: "1-1",
+                    player : "1"
+                }, {
+                    fieldId: "1-2",
+                    player : "0"
+                }, {
+                    fieldId: "1-3",
+                    player : "0"
+                }, {
+                    fieldId: "2-1",
+                    player : "0"
+                }, {
+                    fieldId: "2-2",
+                    player : "1"
+                }, {
+                    fieldId: "2-3",
+                    player : "0"
+                }, {
+                    fieldId: "3-1",
+                    player : "0"
+                }, {
+                    fieldId: "3-3",
+                    player : "1"
+                }];
+                let field = new Field(turns);
+                let winner = field.threeDiagonally(field);
+                return expect(winner).to.deep.equal({ winner: true, player: '1' });
+            });
+        });
         describe("hasWinner", function() {
             it("should tell if there is a winner after a turn", function() {
                 const turn = {
