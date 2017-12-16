@@ -2,7 +2,7 @@ const config = require('../config/mongo');
 const mongoose = require('mongoose');
 const logger = require('./logger');
 
-mongoose.Promise = Promise;
+
 
 let dbUrl = 'mongodb://' + config.mongo.server + ':' + config.mongo.port + '/';
 

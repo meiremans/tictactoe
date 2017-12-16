@@ -1,4 +1,3 @@
-const tokenService = require('./../services/token');
 const authenticationService = require('./../services/authentication');
 
 function login(req, res, next) {

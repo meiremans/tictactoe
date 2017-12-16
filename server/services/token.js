@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const secureRandom = require('secure-random');
 
-//set ridiculously high so it won't expire in game
+//set ridiculously high so it wont expire in game
 const EXPIRES_IN = 36000000;
 const SECRET = secureRandom(256, { type: 'Buffer' });
 

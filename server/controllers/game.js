@@ -5,7 +5,8 @@ async function newGame(req,res,next){
 }
 
 async function doMove(req,res,next){
-   res.json(await gameService.doMove(req.body.playerId,req.body.placeId));
+    console.log(req.body.placeId);
+   res.json(await gameService.doMove(req.params.game_id,req.body.placeId));
 }
 
 module.exports = {

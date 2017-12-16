@@ -1,20 +1,47 @@
 const chai = require('chai');
 const expect = chai.expect;
+var sinon = require('sinon');
+var mongoose = require('mongoose');
+require('sinon-mongoose');
 
 const gameService = require('../../services/game');
+const History = require('../../models/history');
 
-describe("Game Service", function() {
-    describe("New Game", function() {
-        it("should start a new game", function() {
-            let newGame = gameService.newGame();
-           return expect(newGame.gameId).to.exist
+describe("Game Service", function () {
+
+    describe("Calculate AI move", function () {
+        it("should give an empty position where the ai wants to play", function () {
+            const field = [{
+                fieldId: "1-1",
+                player: "1"
+            }, {
+                fieldId: "1-2",
+                player: "0"
+            }, {
+                fieldId: "1-3",
+                player: "1"
+            }, {
+                fieldId: "2-1",
+                player: "0"
+            }, {
+                fieldId: "2-2",
+                player: "1"
+            }, {
+                fieldId: "2-3",
+                player: "1"
+            }, {
+                fieldId: "3-1",
+                player: "0"
+            }, {
+                fieldId: "3-2",
+                player: "1"
+            }, {
+                fieldId: "3-3"
+            }];
+            let position = gameService._private.calculateAIMove(field);
+            return expect(position).to.equal("3-3");
         });
     });
-    describe("Do Move", function() {
-        it("should do a move and get the AI move", function() {
-            let doMove = gameService.doMove();
-           return expect(doMove.ai.placeId).to.exist
-        });
-    });
+
 
 });

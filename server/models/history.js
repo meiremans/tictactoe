@@ -1,15 +1,18 @@
-let mongoose = require('mongoose')
+const mongoose = require('mongoose')
     , Schema = mongoose.Schema;
 
-let historySchema = new Schema({
+const turnsSubSchema = new Schema({
+    fieldId : String,
+    player : String
+});
+const historySchema = new Schema({
     startDate : Date,
     endDate : Date,
-    turns : [
-        {
-            fieldId : String,
-            player : String
-        }
-    ]
+    turns : [turnsSubSchema]
 });
 
-module.exports = historySchema;
+
+
+let History = mongoose.model('History', historySchema);
+
+module.exports = History;
