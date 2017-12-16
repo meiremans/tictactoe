@@ -25,6 +25,7 @@ async function doMove(gameId, fieldId) {
     let field = new Field(history.turns);
     let winner = field.isGameOver();
     if(winner.winner){
+        history.endDate = new Date();
         return winner;
     }
     const aiMove = calculateAIMove(field.field);
@@ -32,6 +33,7 @@ async function doMove(gameId, fieldId) {
     field.addTurn(aiMove,AI_PLAYER);
     winner = field.isGameOver();
     if(winner.winner){
+        history.endDate = new Date();
         return winner;
     }
     //mark turns as modified so mongoose will update it
