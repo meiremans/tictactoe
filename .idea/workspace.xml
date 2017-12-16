@@ -27,12 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="07946dca-eb15-4a0e-8d1e-774ad10850a0" name="Default" comment="minimum working version:&#10;start will start new game&#10;you can position your turn and ai will add his turn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/client/tictactoe/src/actions/board.js" afterPath="$PROJECT_DIR$/client/tictactoe/src/actions/board.js" />
-      <change beforePath="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" afterPath="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" />
-      <change beforePath="$PROJECT_DIR$/client/tictactoe/src/reducers/board.js" afterPath="$PROJECT_DIR$/client/tictactoe/src/reducers/board.js" />
-      <change beforePath="$PROJECT_DIR$/client/tictactoe/src/reducers/index.js" afterPath="$PROJECT_DIR$/client/tictactoe/src/reducers/index.js" />
       <change beforePath="$PROJECT_DIR$/server/middlewares/token.js" afterPath="$PROJECT_DIR$/server/middlewares/token.js" />
       <change beforePath="$PROJECT_DIR$/server/services/game.js" afterPath="$PROJECT_DIR$/server/services/game.js" />
+      <change beforePath="$PROJECT_DIR$/server/services/history.js" afterPath="$PROJECT_DIR$/server/services/history.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,18 +46,6 @@
             <state relative-caret-position="68">
               <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tictactoe/src/containers/HomePage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -117,11 +102,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/tictactoe/src/actions/board.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/history.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/services/history.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,18 +138,6 @@
             <state relative-caret-position="119">
               <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tictactoe/src/reducers/board.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -208,7 +201,6 @@
         <option value="$PROJECT_DIR$/server/tests/game.spec.js" />
         <option value="$PROJECT_DIR$/server/services/authentication.js" />
         <option value="$PROJECT_DIR$/server/controllers/history.js" />
-        <option value="$PROJECT_DIR$/server/services/history.js" />
         <option value="$PROJECT_DIR$/server/tests/services/database.spec.js" />
         <option value="$PROJECT_DIR$/server/tests/services/authentication.spec.js" />
         <option value="$PROJECT_DIR$/server/tests/services/token.spec.js" />
@@ -237,6 +229,7 @@
         <option value="$PROJECT_DIR$/client/tictactoe/src/actions/board.js" />
         <option value="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" />
         <option value="$PROJECT_DIR$/server/services/game.js" />
+        <option value="$PROJECT_DIR$/server/services/history.js" />
       </list>
     </option>
   </component>
@@ -631,7 +624,7 @@
       <workItem from="1513261298078" duration="7367000" />
       <workItem from="1513269770397" duration="12175000" />
       <workItem from="1513351375943" duration="30378000" />
-      <workItem from="1513429987100" duration="30570000" />
+      <workItem from="1513429987100" duration="30919000" />
     </task>
     <task id="LOCAL-00001" summary="further create react app:&#10;Add reducer/action for board">
       <created>1513357619750</created>
@@ -710,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513467575163</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Message when the game is won">
+      <created>1513468367133</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1513468367133</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89790000" />
+    <option name="totallyTimeSpent" value="90139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -770,7 +770,8 @@
     <MESSAGE value="added unit test for diagonally checking&#10;fix problem with diagonally checking" />
     <MESSAGE value="save enddate of game" />
     <MESSAGE value="save enddate when game is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="save enddate when game is over" />
+    <MESSAGE value="Message when the game is won" />
+    <option name="LAST_COMMIT_MESSAGE" value="Message when the game is won" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -831,14 +832,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/tests/services/database.spec.js" />
-    <entry file="file://$PROJECT_DIR$/server/services/history.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/tests/services/token.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1041,14 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/history.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/classes/Field.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -1167,6 +1152,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

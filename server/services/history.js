@@ -1,5 +1,13 @@
+const History = require('./../models/history');
+const logger = require('./../services/logger');
+
 async function list(){
-    return { message: 'List of games' };
+    try {
+        return await History.find({});
+    }catch(e){
+        logger.error(e);
+    }
+
 }
 
 function replay(gameId){
