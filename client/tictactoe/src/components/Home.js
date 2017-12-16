@@ -19,6 +19,7 @@ class App extends Component {
                     <button>History</button>
                 </Link>
                 {board.gameId ? <GameBoard/> : null}
+                {board.winner ? "GAME OVER, PRESS START TO START A NEW GAME" : null}
             </div>
         );
     }

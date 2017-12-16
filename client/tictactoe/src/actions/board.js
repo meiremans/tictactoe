@@ -1,5 +1,6 @@
 export const DO_MOVE = 'DO_MOVE';
 export const NEW_GAME = 'NEW_GAME';
+export const GAME_WON = 'GAME_WON';
 
 
 export function doMove(index, player) {
@@ -16,8 +17,12 @@ export function doMove(index, player) {
             index = parseInt(fieldnumbers[1]) + 5;
         }
     }
-    console.log(index);
+
     return {index, player, type: DO_MOVE};
+}
+
+export function gameOver(winner) {
+    return {winner, type: GAME_WON};
 }
 
 export function playerDoMove(index) {
@@ -66,7 +71,11 @@ export function requestToDoMove(placeId) {
                 return response.json();
             })
             .then((nextMove) => {
-                dispatch(doMove(nextMove.nextMove, 1))
+                if(nextMove.winner){
+                    dispatch(gameOver(nextMove.player))
+                }else {
+                    dispatch(doMove(nextMove.nextMove, 1))
+                }
             })
             .catch((err) => console.log(err))
     };
