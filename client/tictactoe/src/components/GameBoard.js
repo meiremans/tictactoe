@@ -4,11 +4,11 @@ import './GameBoard.css';
 class GameBoard extends Component {
 
     render() {
-        const {doMove, board} = this.props;
+        const {playerDoMove, board} = this.props;
         return (
             <div className="GameBoard">
                 <ul>
-                    <GenerateBoard field={board.field} action ={(index,player) => doMove(index,player)} />
+                    <GenerateBoard field={board.field} action ={(index,player) => playerDoMove(index,player)} />
                 </ul>
             </div>
 
@@ -17,18 +17,18 @@ class GameBoard extends Component {
 }
 
 function GenerateBoard(props) {
-    const listItems = props.field.map((place,index) => (
-     <li key ={place.placeId} onClick={() => props.action(index,1)} className={boardClassBuilder(place.placeId)}
-         id={place.placeId}>{playerIcons(place.player)}</li>
-));
-    return listItems;
+    return props.field.map((place, index) => (
+        <li key={place.placeId} onClick={() => props.action(place.placeId, 1)}
+            className={boardClassBuilder(place.placeId)}
+            id={place.placeId}>{playerIcons(place.player)}</li>
+    ));
 }
 
 function playerIcons(player){
     switch(player) {
-        case 1:
+        case 0:
             return "X";
-        case 2:
+        case 1:
             return "O";
         default:
             return " ";

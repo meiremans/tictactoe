@@ -1,6 +1,7 @@
 import {
-    DO_MOVE
+    DO_MOVE, NEW_GAME
 } from '../actions/board';
+
 
 
 const initialState = {
@@ -26,10 +27,15 @@ const initialState = {
 };
 
 export default function doMove(state = initialState, action) {
+    let newState = {};
     switch (action.type) {
         case DO_MOVE:
-            const newState = {...state};
+            newState = {...state};
             newState.field[action.index].player = action.player;
+            return newState;
+        case NEW_GAME:
+            newState = {...state};
+            newState.gameId  = action.id;
             return newState;
         default:
             return state;
