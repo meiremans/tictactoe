@@ -69,7 +69,7 @@ describe("Class Field", function() {
             let field = new Field(turns);
             let winner = field.isGameOver(field);
             console.log(winner);
-            return expect(winner).to.equal("1");
+            return expect(winner).to.deep.equal({ winner: true, player: '1' });
         });
         describe("threeInARow", function() {
             it("should tell if someone has three in a row", function() {
@@ -100,7 +100,40 @@ describe("Class Field", function() {
                 }];
                 let field = new Field(turns);
                 let winner = field.threeInARow(field);
-                return expect(winner).to.equal("1");
+                return expect(winner).to.deep.equal({ winner: true, player: '1' });
+            });
+        });
+
+        describe("threeInACOlumn", function() {
+            it("should tell if someone has three in a Column", function() {
+                const turns = [{
+                    fieldId: "1-1",
+                    player : "1"
+                }, {
+                    fieldId: "1-2",
+                    player : "0"
+                }, {
+                    fieldId: "1-3",
+                    player : "0"
+                }, {
+                    fieldId: "2-1",
+                    player : "1"
+                }, {
+                    fieldId: "2-2",
+                    player : "1"
+                }, {
+                    fieldId: "2-3",
+                    player : "0"
+                }, {
+                    fieldId: "3-1",
+                    player : "1"
+                }, {
+                    fieldId: "3-2",
+                    player : "0"
+                }];
+                let field = new Field(turns);
+                let winner = field.threeInAColumn(field);
+                return expect(winner).to.deep.equal({ winner: true, player: '1' });
             });
         });
         describe("hasWinner", function() {

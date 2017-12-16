@@ -76,7 +76,7 @@ Field.prototype.threeInARow = function() {
         }
         let isWinner = this.hasWinner(this.field[i], playerCount, aiCount);
         if (isWinner.winner) {
-            return isWinner.player;
+            return isWinner;
         } else {
             playerCount = isWinner.playerCount;
             aiCount = isWinner.aiCount;
@@ -86,17 +86,20 @@ Field.prototype.threeInARow = function() {
 };
 
 
-Field.prototype.threeInAColumn =function () {
+Field.prototype.threeInAColumn = function () {
     let playerCount = 0;
     let aiCount = 0;
     for (let columns = 0; columns <= 3; columns++) {
         for (let i = columns; i < this.field.length; i = i + 3) {
             let winner = this.hasWinner(this.field[i], playerCount, aiCount);
-            if (winner) {
+            playerCount = winner.playerCount;
+            aiCount = winner.aiCount;
+            if (winner.winner) {
                 return winner;
             }
         }
     }
+    return false;
 };
 
 Field.prototype.threeDiagonally = function() {
@@ -105,11 +108,14 @@ Field.prototype.threeDiagonally = function() {
     for (let diagonals = 0; diagonals <= 2; diagonals = diagonals + 2) {
         for (let i = diagonals; i < this.field.length; i = i + 3) {
             let winner = this.hasWinner(this.field[i], playerCount, aiCount);
+            playerCount = winner.playerCount;
+            aiCount = winner.aiCount;
             if (winner) {
                 return winner;
             }
         }
     }
+    return false;
 };
 
 Field.prototype.hasWinner = function (currentPlace,playerCount, aiCount) {
