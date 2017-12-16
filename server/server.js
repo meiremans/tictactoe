@@ -4,6 +4,7 @@ const database = require('./services/database');
 const consign = require('consign');
 let morgan = require('morgan');
 const logger = require('./services/logger');
+const cors = require('cors');
 
 let app = express();
 
@@ -12,6 +13,7 @@ app.routes = express.Router();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 app.use(morgan('dev')); // log requests to the console
 
 const port = process.env.PORT || 8080;
