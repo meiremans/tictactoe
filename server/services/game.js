@@ -20,9 +20,9 @@ async function newGame() {
 
 async function doMove(gameId, fieldId) {
     let history = await History.findById(gameId);
-    let field = new Field(history.turns);
-
     history.turns.push({fieldId:fieldId, player:HUMAN_PLAYER});//push player turn
+
+    let field = new Field(history.turns);
     let winner = field.isGameOver();
     if(winner.winner){
         return winner;
