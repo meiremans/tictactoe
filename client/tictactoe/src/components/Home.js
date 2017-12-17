@@ -13,7 +13,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">TIC-TAK-TOE</h1>
+                    <h1 className="App-title">TIC-TAC-TOE</h1>
                 </header>
                 <button onClick={login}>Login</button>
                 <button onClick={requestNewGame}>Start</button>

@@ -6,15 +6,14 @@ export const GAME_WON = 'GAME_WON';
 export function doMove(index, player) {
     if (typeof index === 'string') {
         let fieldnumbers = index.split("-");
-        console.log(fieldnumbers);
         if (fieldnumbers[0] === "1") {
-            index = parseInt(fieldnumbers[1]) - 1;
+            index = parseInt(fieldnumbers[1],10) - 1;
         }
         if (fieldnumbers[0] === "2") {
-            index = parseInt(fieldnumbers[1]) + 2;
+            index = parseInt(fieldnumbers[1],10) + 2;
         }
         if (fieldnumbers[0] === "3") {
-            index = parseInt(fieldnumbers[1]) + 5;
+            index = parseInt(fieldnumbers[1],10) + 5;
         }
     }
 
@@ -26,7 +25,6 @@ export function gameOver(winner) {
 }
 
 export function playerDoMove(index) {
-    console.log(index);
     return (dispatch) => {
         dispatch(doMove(index, 0));
         dispatch(requestToDoMove(index));
@@ -71,7 +69,6 @@ export function requestToDoMove(placeId) {
                 placeId: placeId
             })
         });
-        console.log(url);
         fetch(request)
             .then((response) => {
                 return response.json();

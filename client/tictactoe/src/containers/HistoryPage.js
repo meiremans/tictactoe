@@ -5,7 +5,8 @@ import * as HistoryActions from '../actions/history';
 
 function mapStateToProps(state) {
     return {
-        history: state.history
+        history: state.history,
+        replayBoard : state.history.replayBoard
     };
 }
 
