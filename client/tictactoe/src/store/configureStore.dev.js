@@ -6,8 +6,7 @@ import rootReducer from '../reducers';
 import {createLogger} from "redux-logger";
 import * as boardActions from '../actions/board';
 import * as userActions from '../actions/user';
-
-
+import * as historyActions from '../actions/history';
 
 
 const history = createHashHistory();
@@ -33,6 +32,7 @@ const configureStore = (initialState) => {
     const actionCreators = {
         ...boardActions,
         ...userActions,
+        historyActions,
         ...routerActions
     };
 
@@ -47,7 +47,7 @@ const configureStore = (initialState) => {
     enhancers.push(applyMiddleware(...middleware));
     const enhancer = composeEnhancers(...enhancers);
 
-    return createStore(rootReducer, initialState,enhancer);
+    return createStore(rootReducer, initialState, enhancer);
 };
 
-export { configureStore, history };
+export {configureStore, history};
