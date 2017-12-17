@@ -5,6 +5,7 @@ import {routerActions, routerMiddleware} from 'react-router-redux';
 import rootReducer from '../reducers';
 import {createLogger} from "redux-logger";
 import * as boardActions from '../actions/board';
+import * as userActions from '../actions/user';
 
 
 
@@ -31,6 +32,7 @@ const configureStore = (initialState) => {
     middleware.push(router);
     const actionCreators = {
         ...boardActions,
+        ...userActions,
         ...routerActions
     };
 

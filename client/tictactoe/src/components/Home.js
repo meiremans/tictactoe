@@ -5,8 +5,9 @@ import GameBoard from './../containers/GameboardPage';
 import {Link} from 'react-router-dom';
 
 class App extends Component {
+
     render() {
-        const {requestNewGame, board} = this.props;
+        const {requestNewGame, board,login} = this.props;
 
         return (
             <div className="App">
@@ -14,6 +15,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">TIC-TAK-TOE</h1>
                 </header>
+                <button onClick={login}>Login</button>
                 <button onClick={requestNewGame}>Start</button>
                 <Link to="/history">
                     <button>History</button>

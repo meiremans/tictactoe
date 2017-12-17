@@ -40,8 +40,13 @@ export function newGame(id) {
 
 export function requestNewGame() {
     const url = "http://localhost:8080/api/game/new";
-    return (dispatch) => {
-        fetch(url)
+    return (dispatch,getState) => {
+        const request = new Request(url, {
+            headers: {
+                'Authorization': getState().user.token
+            }
+        });
+        fetch(request)
             .then((response) => {
                 return response.json();
             })
@@ -58,7 +63,8 @@ export function requestToDoMove(placeId) {
         const request = new Request(url, {
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': getState().user.token
             },
             method: 'POST',
             body: JSON.stringify({

@@ -5,7 +5,7 @@ import {
 
 const initialState = getInitialState();
 
-export default function doMove(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     let newState = {};
     switch (action.type) {
         case DO_MOVE:
