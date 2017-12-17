@@ -5,7 +5,9 @@ import GameBoard from './../containers/GameboardPage';
 import {Link} from 'react-router-dom';
 
 class App extends Component {
-
+    componentDidMount() {
+        this.props.login();
+    }
     render() {
         const {requestNewGame, board,login} = this.props;
 
@@ -15,7 +17,6 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">TIC-TAC-TOE</h1>
                 </header>
-                <button onClick={login}>Login</button>
                 <button onClick={requestNewGame}>Start</button>
                 <Link to="/history">
                     <button>History</button>
