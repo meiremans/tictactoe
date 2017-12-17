@@ -9,10 +9,14 @@ mongodb<br/>
  MONGO_DB<br/>
  MONGO_SERVER<br/>
  
- npm start will fire up the server
+ cd ./server/<br/>
+ npm start <br/>
+ will fire up the server
  
  the client resides in client/tictactoe<br/>
- npm start will fire up the client and open the browser<br/> 
+ cd ./client/tictactoe<br/>
+ npm start<br/>
+ will fire up the client and open the browser<br/> 
  
  
                                       

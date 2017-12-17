@@ -28,8 +28,6 @@
     <list default="true" id="07946dca-eb15-4a0e-8d1e-774ad10850a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/server/classes/Field.js" afterPath="$PROJECT_DIR$/server/classes/Field.js" />
-      <change beforePath="$PROJECT_DIR$/server/tests/classes/Field.spec.js" afterPath="$PROJECT_DIR$/server/tests/classes/Field.spec.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -97,7 +95,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="340">
-                <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -635,7 +633,7 @@
       <workItem from="1513269770397" duration="12175000" />
       <workItem from="1513351375943" duration="30378000" />
       <workItem from="1513429987100" duration="41243000" />
-      <workItem from="1513513434664" duration="9628000" />
+      <workItem from="1513513434664" duration="10335000" />
     </task>
     <task id="LOCAL-00001" summary="further create react app:&#10;Add reducer/action for board">
       <created>1513357619750</created>
@@ -756,11 +754,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513526258384</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add readme">
+      <created>1513526731255</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1513526731255</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110091000" />
+    <option name="totallyTimeSpent" value="110798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
@@ -822,7 +827,8 @@
     <MESSAGE value="basic history list" />
     <MESSAGE value="implemented history with replay" />
     <MESSAGE value="automatic login" />
-    <option name="LAST_COMMIT_MESSAGE" value="automatic login" />
+    <MESSAGE value="add readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1236,7 +1242,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="340">
-            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             <folding />
           </first_editor>
           <second_editor />
