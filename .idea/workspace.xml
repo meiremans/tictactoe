@@ -27,7 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="07946dca-eb15-4a0e-8d1e-774ad10850a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" afterPath="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/server/classes/Field.js" afterPath="$PROJECT_DIR$/server/classes/Field.js" />
       <change beforePath="$PROJECT_DIR$/server/tests/classes/Field.spec.js" afterPath="$PROJECT_DIR$/server/tests/classes/Field.spec.js" />
     </list>
@@ -82,11 +82,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/tictactoe/src/components/Home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="340">
+                <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/config/mongo/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/config/mongo/default.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,36 +143,6 @@
               <folding>
                 <element signature="e#0#79#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameBoard.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tictactoe/src/components/GameBoard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="107" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardLayout.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tictactoe/src/components/BoardLayout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/tictactoe/src/actions/history.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -186,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/config/mongo/default.json" />
         <option value="$PROJECT_DIR$/server/config/mongo/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server/controllers/play.js" />
@@ -237,6 +239,7 @@
         <option value="$PROJECT_DIR$/client/tictactoe/src/components/History.js" />
         <option value="$PROJECT_DIR$/client/tictactoe/src/reducers/history.js" />
         <option value="$PROJECT_DIR$/client/tictactoe/src/components/Home.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -632,7 +635,7 @@
       <workItem from="1513269770397" duration="12175000" />
       <workItem from="1513351375943" duration="30378000" />
       <workItem from="1513429987100" duration="41243000" />
-      <workItem from="1513513434664" duration="9153000" />
+      <workItem from="1513513434664" duration="9628000" />
     </task>
     <task id="LOCAL-00001" summary="further create react app:&#10;Add reducer/action for board">
       <created>1513357619750</created>
@@ -746,11 +749,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513526135478</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="automatic login">
+      <created>1513526258384</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1513526258384</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109616000" />
+    <option name="totallyTimeSpent" value="110091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
@@ -811,30 +821,14 @@
     <MESSAGE value="implemented jwt auth" />
     <MESSAGE value="basic history list" />
     <MESSAGE value="implemented history with replay" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented history with replay" />
+    <MESSAGE value="automatic login" />
+    <option name="LAST_COMMIT_MESSAGE" value="automatic login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/config/constants.json" />
-    <entry file="file://$PROJECT_DIR$/server/controllers/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tests/services/authentication.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/node_modules/sinon-mongoose/dist/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1219,6 +1213,33 @@
         <state relative-caret-position="238">
           <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/mongo/default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/mongo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

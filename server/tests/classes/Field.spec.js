@@ -68,7 +68,6 @@ describe("Class Field", function() {
             }];
             let field = new Field(turns);
             let winner = field.isGameOver(field);
-            console.log(winner);
             return expect(winner).to.deep.equal({ winner: true, player: '1' });
         });
         describe("threeInARow", function() {

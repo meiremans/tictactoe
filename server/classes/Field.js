@@ -109,7 +109,6 @@ Field.prototype.threeDiagonally = function() {
     let aiCount = 0;
 
     for(let i = 2; i < 8; i+=2){
-        console.log(this.field[i]);
         let winner = this.hasWinner(this.field[i], playerCount, aiCount);
         playerCount = winner.playerCount;
         aiCount = winner.aiCount;
@@ -117,7 +116,6 @@ Field.prototype.threeDiagonally = function() {
             return winner;
         }
     }
-    console.log('-----');
      playerCount = 0;
      aiCount = 0;
 
